@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Mistplay Challenge</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_games">Games</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_bonus">Bonus</string>
+    <string name="title_profile">Profile</string>
 </resources>

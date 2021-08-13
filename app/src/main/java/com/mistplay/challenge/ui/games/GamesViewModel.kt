@@ -1,13 +1,13 @@
-package com.mistplay.challenge.ui.dashboard
+package com.mistplay.challenge.ui.games
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class GamesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "This Is Games Screen"
     }
     val text: LiveData<String> = _text
 }

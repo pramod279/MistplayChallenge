@@ -3,23 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_games">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.mistplay.challenge.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_games"
+        android:name="com.mistplay.challenge.ui.games.GamesFragment"
+        android:label="@string/title_games"
+        tools:layout="@layout/fragment_games" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.mistplay.challenge.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_chat"
+        android:name="com.mistplay.challenge.ui.chat.ChatFragment"
+        android:label="@string/title_chat"
+        tools:layout="@layout/fragment_chat" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.mistplay.challenge.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_shop"
+        android:name="com.mistplay.challenge.ui.shop.ShopsFragment"
+        android:label="@string/title_shop"
+        tools:layout="@layout/fragment_shops" />
+
+    <fragment
+        android:id="@+id/navigation_bonus"
+        android:name="com.mistplay.challenge.ui.bonus.BonusFragment"
+        android:label="@string/title_bonus"
+        tools:layout="@layout/fragment_bonus" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.mistplay.challenge.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

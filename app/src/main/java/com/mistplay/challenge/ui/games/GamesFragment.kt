@@ -1,4 +1,4 @@
-package com.mistplay.challenge.ui.notifications
+package com.mistplay.challenge.ui.games
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.mistplay.challenge.databinding.FragmentNotificationsBinding
+import com.mistplay.challenge.databinding.FragmentGamesBinding
 
-class NotificationsFragment : Fragment() {
+class GamesFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
-    private var _binding: FragmentNotificationsBinding? = null
+    private lateinit var gamesViewModel: GamesViewModel
+    private var _binding: FragmentGamesBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,14 +24,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        gamesViewModel =
+            ViewModelProvider(this).get(GamesViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentGamesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textGames
+        gamesViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
