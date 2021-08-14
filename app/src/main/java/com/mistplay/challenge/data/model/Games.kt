@@ -6,6 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Games(
+    val id: String,
     @SerializedName("title")
     val title: String,
     @SerializedName("img")
