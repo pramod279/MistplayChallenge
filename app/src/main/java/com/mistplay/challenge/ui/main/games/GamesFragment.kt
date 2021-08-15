@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.mistplay.challenge.databinding.FragmentGamesBinding
+import com.mistplay.challenge.ui.main.games.adapters.CategoryAdapter
 import com.mistplay.challenge.ui.main.games.viewmodel.GamesViewModel
 
 /**
@@ -34,7 +35,25 @@ class GamesFragment : Fragment() {
         /*Specify the current activity as the lifecycle owner.*/
         binding.lifecycleOwner = this
 
-        return binding.root
+        val root: View = binding.root
+
+        fetchGameCategories()
+        showGameCategories()
+        return root
+    }
+
+    /*Function for Fetching All The Game Categories From Repository*/
+    private fun fetchGameCategories() {
+        context?.let { gamesViewModel.fetchAllCategories(it) }
+    }
+
+    /*Function for Populating The Games Categories In The View*/
+    private fun showGameCategories() {
+        val bookCategoryAdapter = CategoryAdapter()
+        binding.recyclerViewCategory.adapter = bookCategoryAdapter
+        gamesViewModel.mediatorLiveData.observe(viewLifecycleOwner, {
+            bookCategoryAdapter.submitList(it)
+        })
     }
 
     override fun onDestroyView() {
