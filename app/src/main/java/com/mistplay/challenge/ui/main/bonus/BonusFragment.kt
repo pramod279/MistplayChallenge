@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.mistplay.challenge.databinding.FragmentBonusBinding
 
 class BonusFragment : Fragment() {
-
     private lateinit var bonusViewModel: BonusViewModel
     private var _binding: FragmentBonusBinding? = null
 
@@ -23,7 +22,7 @@ class BonusFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         bonusViewModel =
             ViewModelProvider(this).get(BonusViewModel::class.java)
 

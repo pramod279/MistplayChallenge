@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.mistplay.challenge.databinding.FragmentChatBinding
 
 class ChatFragment : Fragment() {
-
     private lateinit var chatViewModel: ChatViewModel
     private var _binding: FragmentChatBinding? = null
 
@@ -23,7 +22,7 @@ class ChatFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         chatViewModel =
             ViewModelProvider(this).get(ChatViewModel::class.java)
 

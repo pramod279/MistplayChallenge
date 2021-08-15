@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.mistplay.challenge.databinding.FragmentShopsBinding
 
 class ShopsFragment : Fragment() {
-
     private lateinit var shopsViewModel: ShopsViewModel
     private var _binding: FragmentShopsBinding? = null
 
@@ -23,7 +22,7 @@ class ShopsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         shopsViewModel =
             ViewModelProvider(this).get(ShopsViewModel::class.java)
 

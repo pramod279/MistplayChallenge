@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.mistplay.challenge.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
-
     private lateinit var profileViewModel: ProfileViewModel
     private var _binding: FragmentProfileBinding? = null
 
@@ -23,7 +22,7 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         profileViewModel =
             ViewModelProvider(this).get(ProfileViewModel::class.java)
 

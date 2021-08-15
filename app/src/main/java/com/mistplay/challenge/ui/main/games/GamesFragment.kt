@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.mistplay.challenge.databinding.FragmentGamesBinding
-import com.mistplay.challenge.ui.main.games.adapters.CategoryAdapter
 import com.mistplay.challenge.ui.main.games.viewmodel.GamesViewModel
 
 /**
@@ -16,7 +15,7 @@ import com.mistplay.challenge.ui.main.games.viewmodel.GamesViewModel
  * Created by Pramod Selvaraj on 13/08/2021.
  */
 class GamesFragment : Fragment() {
-    private lateinit var gamesViewModel: GamesViewModel
+    private lateinit var profileViewModel: GamesViewModel
     private var _binding: FragmentGamesBinding? = null
 
     // This property is only valid between onCreateView and
@@ -28,32 +27,14 @@ class GamesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        gamesViewModel =
+        profileViewModel =
             ViewModelProvider(this).get(GamesViewModel::class.java)
 
         _binding = FragmentGamesBinding.inflate(inflater, container, false)
         /*Specify the current activity as the lifecycle owner.*/
         binding.lifecycleOwner = this
 
-        val root: View = binding.root
-
-        fetchGameCategories()
-        showGameCategories()
-        return root
-    }
-
-    /*Function for Fetching All The Game Categories From Repository*/
-    private fun fetchGameCategories() {
-        context?.let { gamesViewModel.fetchAllCategories(it) }
-    }
-
-    /*Function for Populating The Games Categories In The View*/
-    private fun showGameCategories() {
-        val bookCategoryAdapter = CategoryAdapter()
-        binding.recyclerViewCategory.adapter = bookCategoryAdapter
-        gamesViewModel.mediatorLiveData.observe(viewLifecycleOwner, {
-            bookCategoryAdapter.submitList(it)
-        })
+        return binding.root
     }
 
     override fun onDestroyView() {
