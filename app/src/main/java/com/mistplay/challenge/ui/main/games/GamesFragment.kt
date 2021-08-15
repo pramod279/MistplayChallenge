@@ -49,10 +49,10 @@ class GamesFragment : Fragment() {
 
     /*Function for Populating The Games Categories In The View*/
     private fun showGameCategories() {
-        val bookCategoryAdapter = CategoryAdapter()
-        binding.recyclerViewCategory.adapter = bookCategoryAdapter
+        val categoryAdapter = CategoryAdapter()
+        binding.recyclerViewCategory.adapter = categoryAdapter
         gamesViewModel.mediatorLiveData.observe(viewLifecycleOwner, {
-            bookCategoryAdapter.submitList(it)
+            categoryAdapter.submitList(it)
         })
     }
 

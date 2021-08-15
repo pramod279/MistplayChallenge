@@ -1,10 +1,12 @@
 package com.mistplay.challenge.ui.main.games.viewmodel
 
 import android.content.Context
-import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mistplay.challenge.data.model.Category
 import com.mistplay.challenge.data.repository.CategoryRepository
+import com.mistplay.challenge.ui.utils.Coroutines
+import kotlinx.coroutines.Job
 
 /**
  * Games Tab View Models
@@ -14,15 +16,15 @@ import com.mistplay.challenge.data.repository.CategoryRepository
 class GamesViewModel : ViewModel() {
 
     private val repository = CategoryRepository()
+    private lateinit var job: Job
 
-    var mediatorLiveData: MediatorLiveData<List<Category>> = MediatorLiveData<List<Category>>()
+    var mediatorLiveData: MutableLiveData<List<Category>> = MutableLiveData()
 
-    /*Fetching all the Categories From The Repository*/
+    /*Function for fetching all the Categories From The Repository & Showing To View*/
     fun fetchAllCategories(context: Context) {
-        mediatorLiveData.addSource(
-            repository.fetchCategories(context)
-        ) {
-            mediatorLiveData.postValue(it)
-        }
+        job = Coroutines.ioThenMain(
+            { repository.fetchCategories(context) },
+            { mediatorLiveData.postValue(it) }
+        )
     }
 }

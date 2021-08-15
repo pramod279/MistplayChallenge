@@ -1,21 +1,25 @@
 package com.mistplay.challenge.data.repository
 
 import android.content.Context
-import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.mistplay.challenge.data.model.Category
 import com.mistplay.challenge.data.model.Games
 import com.mistplay.challenge.ui.utils.Utils
 
+/**
+ * Repository For Fetching Categories Data From Store
+ *
+ * Created by Pramod Selvaraj on 13/08/2021.
+ */
 class CategoryRepository {
-    private val gameCategories = MutableLiveData<List<Category>>()
+    private var gameCategories = listOf<Category>()
 
     /**
      * Function for Reading the Dummy Json Data from the Assets Folder
      * @return gameCategories
      */
-    fun fetchCategories(context: Context): MutableLiveData<List<Category>> {
+    fun fetchCategories(context: Context): List<Category> {
         val jsonFileString = Utils.getJsonDataFromAsset(context, "categories.json")
         if (jsonFileString != null) {
             val listCategoryType = object : TypeToken<List<Category>>() {}.type
@@ -29,7 +33,7 @@ class CategoryRepository {
                 }
                 gameCategory += Category(category.categoryTitle, gamesList)
             }
-            gameCategories.value = categories
+            gameCategories = categories
         }
         return gameCategories
     }
