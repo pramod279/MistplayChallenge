@@ -22,11 +22,15 @@ class GamesFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         gamesViewModel =
             ViewModelProvider(this).get(GamesViewModel::class.java)
 
         _binding = FragmentGamesBinding.inflate(inflater, container, false)
+
+        // Specify the current activity as the lifecycle owner.
+        binding.lifecycleOwner = this
+
         val root: View = binding.root
 
         /*val textView: TextView = binding.textGames
