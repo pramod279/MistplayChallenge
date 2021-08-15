@@ -15,7 +15,7 @@ import com.mistplay.challenge.ui.main.games.viewmodel.GamesViewModel
  * Created by Pramod Selvaraj on 13/08/2021.
  */
 class GamesFragment : Fragment() {
-    private lateinit var profileViewModel: GamesViewModel
+    private lateinit var gamesViewModel: GamesViewModel
     private var _binding: FragmentGamesBinding? = null
 
     // This property is only valid between onCreateView and
@@ -27,7 +27,7 @@ class GamesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        profileViewModel =
+        gamesViewModel =
             ViewModelProvider(this).get(GamesViewModel::class.java)
 
         _binding = FragmentGamesBinding.inflate(inflater, container, false)
