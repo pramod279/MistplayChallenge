@@ -24,10 +24,10 @@ class CategoryRepository {
             for (category in categories) {
                 val gamesList = arrayListOf<Games>()
                 for (game in category.games) {
-                    val book = Games("", game.title, game.img)
+                    val book = Games(game.title, game.img)
                     gamesList += book
                 }
-                gameCategory += Category("", category.categoryTitle, gamesList)
+                gameCategory += Category(category.categoryTitle, gamesList)
             }
             gameCategories.value = categories
         }

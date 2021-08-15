@@ -9,6 +9,11 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mistplay.challenge.databinding.ActivityMainBinding
 
+/**
+ * Launching Activity
+ *
+ * Created by Pramod Selvaraj on 13/08/2021.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

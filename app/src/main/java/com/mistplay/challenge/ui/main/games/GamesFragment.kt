@@ -10,8 +10,12 @@ import com.mistplay.challenge.databinding.FragmentGamesBinding
 import com.mistplay.challenge.ui.main.games.adapters.CategoryAdapter
 import com.mistplay.challenge.ui.main.games.viewmodel.GamesViewModel
 
+/**
+ * Games Tab Screen
+ *
+ * Created by Pramod Selvaraj on 13/08/2021.
+ */
 class GamesFragment : Fragment() {
-
     private lateinit var gamesViewModel: GamesViewModel
     private var _binding: FragmentGamesBinding? = null
 

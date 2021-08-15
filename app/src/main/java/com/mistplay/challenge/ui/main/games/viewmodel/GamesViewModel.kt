@@ -6,6 +6,11 @@ import androidx.lifecycle.ViewModel
 import com.mistplay.challenge.data.model.Category
 import com.mistplay.challenge.data.repository.CategoryRepository
 
+/**
+ * Games Tab View Models
+ *
+ * Created by Pramod Selvaraj on 13/08/2021.
+ */
 class GamesViewModel : ViewModel() {
 
     private val repository = CategoryRepository()

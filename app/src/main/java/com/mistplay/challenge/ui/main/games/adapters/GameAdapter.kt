@@ -10,6 +10,9 @@ import com.mistplay.challenge.ui.base.BaseViewHolder
 
 /**
  * Games Adapter ==> Games Tab
+ * Horizontal Listing
+ *
+ * Created by Pramod Selvaraj on 14/08/2021.
  */
 class GameAdapter : ListAdapter<Games, BaseViewHolder>(Companion) {
     /*Diff Util For Updating The Recycler View If Any Change In Data*/
@@ -19,7 +22,7 @@ class GameAdapter : ListAdapter<Games, BaseViewHolder>(Companion) {
         }
 
         override fun areContentsTheSame(oldItem: Games, newItem: Games): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.title == newItem.title
         }
     }
 

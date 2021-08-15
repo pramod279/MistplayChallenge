@@ -11,6 +11,9 @@ import com.mistplay.challenge.ui.base.BaseViewHolder
 
 /**
  * Categories Adapter ==> Games Tab
+ * Vertical Listing
+ *
+ * Created by Pramod Selvaraj on 14/08/2021.
  */
 class CategoryAdapter : ListAdapter<Category, BaseViewHolder>(Companion) {
     private val viewPool = RecyclerView.RecycledViewPool()
@@ -22,7 +25,7 @@ class CategoryAdapter : ListAdapter<Category, BaseViewHolder>(Companion) {
         }
 
         override fun areContentsTheSame(oldItem: Category, newItem: Category): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.categoryTitle == newItem.categoryTitle
         }
     }
 

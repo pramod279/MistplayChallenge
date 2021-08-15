@@ -9,7 +9,6 @@ import kotlinx.parcelize.Parcelize
  */
 @Parcelize
 data class Category(
-    val id: String,
     @SerializedName("list_title")
     val categoryTitle: String,
     @SerializedName("games")

@@ -3,10 +3,13 @@ package com.mistplay.challenge.ui.utils
 import android.content.Context
 import java.io.IOException
 
+/**
+ * Utils Class for Managing all The Helper Functions
+ *
+ * Created by Pramod Selvaraj on 13/08/2021.
+ */
 object Utils {
-    /**
-     * Function for Fetching Json Data From Assets Folder
-     */
+    /*Function for Fetching Json Data From Assets Folder*/
     fun getJsonDataFromAsset(context: Context, fileName: String): String? {
         val jsonString: String
         try {

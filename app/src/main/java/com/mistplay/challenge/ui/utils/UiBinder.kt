@@ -7,6 +7,8 @@ import com.mistplay.challenge.R
 
 /**
  * UI Binder Class For Binding UI Elements To The View
+ *
+ * Created by Pramod Selvaraj on 13/08/2021.
  */
 @BindingAdapter("imageUrl")
 fun loadImage(view: ImageView, imageUrl: String?) {
