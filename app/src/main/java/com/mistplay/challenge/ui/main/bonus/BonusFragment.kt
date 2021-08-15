@@ -1,4 +1,4 @@
-package com.mistplay.challenge.ui.games
+package com.mistplay.challenge.ui.main.bonus
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.mistplay.challenge.databinding.FragmentGamesBinding
+import com.mistplay.challenge.databinding.FragmentBonusBinding
 
-class GamesFragment : Fragment() {
+class BonusFragment : Fragment() {
 
-    private lateinit var gamesViewModel: GamesViewModel
-    private var _binding: FragmentGamesBinding? = null
+    private lateinit var bonusViewModel: BonusViewModel
+    private var _binding: FragmentBonusBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,16 +24,16 @@ class GamesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        gamesViewModel =
-            ViewModelProvider(this).get(GamesViewModel::class.java)
+        bonusViewModel =
+            ViewModelProvider(this).get(BonusViewModel::class.java)
 
-        _binding = FragmentGamesBinding.inflate(inflater, container, false)
+        _binding = FragmentBonusBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        /*val textView: TextView = binding.textGames
-        gamesViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textBonus
+        bonusViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-        })*/
+        })
         return root
     }
 

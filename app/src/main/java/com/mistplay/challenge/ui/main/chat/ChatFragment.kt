@@ -1,4 +1,4 @@
-package com.mistplay.challenge.ui.shop
+package com.mistplay.challenge.ui.main.chat
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.mistplay.challenge.databinding.FragmentShopsBinding
+import com.mistplay.challenge.databinding.FragmentChatBinding
 
-class ShopsFragment : Fragment() {
+class ChatFragment : Fragment() {
 
-    private lateinit var shopsViewModel: ShopsViewModel
-    private var _binding: FragmentShopsBinding? = null
+    private lateinit var chatViewModel: ChatViewModel
+    private var _binding: FragmentChatBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,14 +24,14 @@ class ShopsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        shopsViewModel =
-            ViewModelProvider(this).get(ShopsViewModel::class.java)
+        chatViewModel =
+            ViewModelProvider(this).get(ChatViewModel::class.java)
 
-        _binding = FragmentShopsBinding.inflate(inflater, container, false)
+        _binding = FragmentChatBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textShops
-        shopsViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textChat
+        chatViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

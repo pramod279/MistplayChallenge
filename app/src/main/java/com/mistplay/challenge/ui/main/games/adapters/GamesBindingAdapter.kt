@@ -1,4 +1,4 @@
-package com.mistplay.challenge.ui.games.adapters
+package com.mistplay.challenge.ui.main.games.adapters
 
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView

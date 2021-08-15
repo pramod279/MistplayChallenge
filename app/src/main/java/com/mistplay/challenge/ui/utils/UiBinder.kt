@@ -1,4 +1,4 @@
-package com.mistplay.challenge.utils
+package com.mistplay.challenge.ui.utils
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
@@ -10,11 +10,8 @@ import com.mistplay.challenge.R
  */
 @BindingAdapter("imageUrl")
 fun loadImage(view: ImageView, imageUrl: String?) {
-    if (!imageUrl.isNullOrEmpty()) {
-        Glide.with(view.context)
-            .load(imageUrl)
-            .placeholder(R.drawable.ic_placeholder)
-            .into(view)
-        return
-    }
+    Glide.with(view.context)
+        .load(imageUrl)
+        .placeholder(R.drawable.ic_placeholder)
+        .into(view)
 }

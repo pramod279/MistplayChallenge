@@ -1,13 +1,13 @@
-package com.mistplay.challenge.ui.games
+package com.mistplay.challenge.ui.main.bonus
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GamesViewModel : ViewModel() {
+class BonusViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This Is Games Screen"
+        value = "This Is Bonus Screen"
     }
     val text: LiveData<String> = _text
 }

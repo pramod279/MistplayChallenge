@@ -1,4 +1,4 @@
-package com.mistplay.challenge.ui.profile
+package com.mistplay.challenge.ui.main.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

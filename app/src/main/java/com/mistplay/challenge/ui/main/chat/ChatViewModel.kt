@@ -1,4 +1,4 @@
-package com.mistplay.challenge.ui.chat
+package com.mistplay.challenge.ui.main.chat
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

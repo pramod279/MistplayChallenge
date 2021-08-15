@@ -1,4 +1,4 @@
-package com.mistplay.challenge.utils
+package com.mistplay.challenge.ui.utils
 
 import android.content.Context
 import java.io.IOException
