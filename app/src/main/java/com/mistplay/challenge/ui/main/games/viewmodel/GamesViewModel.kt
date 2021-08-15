@@ -12,7 +12,7 @@ class GamesViewModel : ViewModel() {
 
     var mediatorLiveData: MediatorLiveData<List<Category>> = MediatorLiveData<List<Category>>()
 
-    //Get all task from database
+    /*Fetching all the Categories From The Repository*/
     fun fetchAllCategories(context: Context) {
         mediatorLiveData.addSource(
             repository.fetchCategories(context)

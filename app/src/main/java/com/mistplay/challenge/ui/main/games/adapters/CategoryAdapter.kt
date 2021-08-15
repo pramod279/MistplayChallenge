@@ -9,9 +9,13 @@ import com.mistplay.challenge.data.model.Category
 import com.mistplay.challenge.databinding.ItemGameCategoryBinding
 import com.mistplay.challenge.ui.base.BaseViewHolder
 
+/**
+ * Categories Adapter ==> Games Tab
+ */
 class CategoryAdapter : ListAdapter<Category, BaseViewHolder>(Companion) {
     private val viewPool = RecyclerView.RecycledViewPool()
 
+    /*Diff Util For Updating The Recycler View If Any Change In Data*/
     companion object : DiffUtil.ItemCallback<Category>() {
         override fun areItemsTheSame(oldItem: Category, newItem: Category): Boolean {
             return oldItem === newItem
@@ -31,6 +35,7 @@ class CategoryAdapter : ListAdapter<Category, BaseViewHolder>(Companion) {
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+        /*Binding The Current Item To The View*/
         val currentCategory = getItem(position)
         val itemBinding = holder.binding as ItemGameCategoryBinding
 
