@@ -12,15 +12,15 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/one_fifty_dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/lyt_game_card"
             android:layout_width="@dimen/one_fifty_dp"
             android:layout_height="@dimen/two_hundred_dp"
-            android:elevation="@dimen/eight_dp"
             app:cardCornerRadius="@dimen/ten_dp"
+            app:cardElevation="@dimen/six_dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,19 +37,18 @@
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/ten_dp"
-            android:layout_marginTop="@dimen/six_dp"
-            android:layout_marginEnd="@dimen/ten_dp"
-            android:layout_marginBottom="@dimen/six_dp"
             android:ellipsize="end"
             android:maxLines="1"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
             android:text="@{game.title}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/twelve_sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lyt_game_card"
+            app:layout_constraintStart_toStartOf="@+id/lyt_game_card"
             app:layout_constraintTop_toBottomOf="@+id/lyt_game_card"
             tools:text="Mistplay Challenge" />
     </androidx.constraintlayout.widget.ConstraintLayout>

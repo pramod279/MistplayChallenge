@@ -14,7 +14,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/sixteen_dp">
 
         <TextView
             android:id="@+id/txt_category_tile"
@@ -24,7 +25,7 @@
             android:maxLines="1"
             android:text="@{gameCategory.categoryTitle}"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/eighteen_sp"
+            android:textSize="@dimen/twenty_sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -35,7 +36,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/eight_dp"
-            android:layout_marginTop="@dimen/eight_dp"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
