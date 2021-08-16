@@ -19,10 +19,10 @@ This repository contains the Mistplay Challenge Android app by Pramod Selvaraj.<
 
 ### Components Used
 
-* Material Design
 * Navigation Components
-* Live Data
+* Material Design
 * Diff Util
+* Live Data
 * View Model
 * Coroutines
 * Glide
