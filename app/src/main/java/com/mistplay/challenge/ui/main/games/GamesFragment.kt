@@ -36,6 +36,7 @@ class GamesFragment : Fragment() {
         /*Specify the current activity as the lifecycle owner.*/
         binding.lifecycleOwner = this
 
+        /*Initialise Categories Adapter*/
         initCategoryAdapter()
 
         /*Bind Games Category Adapter*/
