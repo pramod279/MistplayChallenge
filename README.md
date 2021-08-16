@@ -1,11 +1,25 @@
-# MistplayChallenge - Android 
+# MistplayChallenge - Android
 
-This repository contains the Mistplay Challenge Android app by Pramod Selvaraj.<br>
+This repository contains the Mistplay Challenge Android app.<br>
 
 ## System Requirements
 
-- [Windows 10](https://www.microsoft.com/en-in/software-download/windows10) or [Ubuntu 18.10 LTS](https://ubuntu.com/#download) or [Mac OS](https://www.apple.com/in/macos/catalina/)
+- [Windows 10](https://www.microsoft.com/en-in/software-download/windows10)
+  or [Ubuntu 18.10 LTS](https://ubuntu.com/#download)
+  or [Mac OS](https://www.apple.com/in/macos/catalina/)
 - [Android Studio Arctic Fox v2020.3.1](https://developer.android.com/studio/intro)
+
+### Setup Guide
+
+* [Clone Git Repo](https://github.com/pramod279/MistplayChallenge)
+* Import the Project & Run In Android Studio
+
+### Mistplay Challenge Android App Device Compatibility
+
+* Android L & Above
+* Min SDK ==> 21
+* Max SDK ==> 31
+* Orientation ==> Portrait & Landscape
 
 ### Programming Languages
 
@@ -30,3 +44,7 @@ This repository contains the Mistplay Challenge Android app by Pramod Selvaraj.<
 ### Demo Video
 
 https://user-images.githubusercontent.com/16115553/129509249-f57c5957-e8d1-4826-8121-5ffa057b90ad.mp4
+
+### Developed By
+
+* Pramod Selvaraj
