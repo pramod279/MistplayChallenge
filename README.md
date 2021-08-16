@@ -1,5 +1,21 @@
-# MistplayChallenge
-Mistplay Challenge by Pramod Selvaraj
+# MistplayChallenge - Android 
+
+This repository contains the Mistplay Challenge Android app.<br>
+
+## System Requirements
+
+- [Windows 10](https://www.microsoft.com/en-in/software-download/windows10) or [Ubuntu 18.10 LTS](https://ubuntu.com/#download) or [Mac OS](https://www.apple.com/in/macos/catalina/)
+- [Android Studio Arctic Fox v2020.3.1](https://developer.android.com/studio/intro)
+
+### Programming Languages
+
+* Kotlin 1.5.21
+* XML
+* Java 8
+
+### Tools Required
+
+* SDK/IDE - Android Studio Arctic Fox v2020.3.1
 
 ### Demo Video
 
