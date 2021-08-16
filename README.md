@@ -11,7 +11,7 @@ This repository contains the Mistplay Challenge Android app.<br>
 
 ### Setup Guide
 
-* [Clone Git Repo](https://github.com/pramod279/MistplayChallenge)
+* [Clone Mistplay Challenge Repo](https://github.com/pramod279/MistplayChallenge)
 * Import the Project & Run In Android Studio
 
 ### Mistplay Challenge Android App Device Compatibility
