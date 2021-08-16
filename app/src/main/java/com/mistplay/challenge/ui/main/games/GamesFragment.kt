@@ -51,7 +51,7 @@ class GamesFragment : Fragment() {
     private fun showGameCategories() {
         val categoryAdapter = CategoryAdapter()
         binding.recyclerViewCategory.adapter = categoryAdapter
-        gamesViewModel.mediatorLiveData.observe(viewLifecycleOwner, {
+        gamesViewModel.categories.observe(viewLifecycleOwner, {
             categoryAdapter.submitList(it)
         })
     }

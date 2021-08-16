@@ -1,6 +1,7 @@
 package com.mistplay.challenge.ui.main.games.viewmodel
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mistplay.challenge.data.model.Category
@@ -14,17 +15,29 @@ import kotlinx.coroutines.Job
  * Created by Pramod Selvaraj on 13/08/2021.
  */
 class GamesViewModel : ViewModel() {
-
-    private val repository = CategoryRepository()
     private lateinit var job: Job
+    private val repository = CategoryRepository()
 
-    var mediatorLiveData: MutableLiveData<List<Category>> = MutableLiveData()
+    /**
+     * Lazy initialization is primarily used to improve performance,
+     * avoid wasteful computation, and reduce program memory requirements.
+     */
+    private val _categories by lazy {
+        MutableLiveData<List<Category>>()
+    }
+
+    val categories: LiveData<List<Category>> get() = _categories
 
     /*Function for fetching all the Categories From The Repository & Showing To View*/
     fun fetchAllCategories(context: Context) {
         job = Coroutines.ioThenMain(
             { repository.fetchCategories(context) },
-            { mediatorLiveData.postValue(it) }
+            { _categories.postValue(it) }
         )
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        if (::job.isInitialized) job.cancel()
     }
 }

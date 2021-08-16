@@ -26,12 +26,11 @@ class CategoryRepository {
             val categories: List<Category> = Gson().fromJson(jsonFileString, listCategoryType)
             val gameCategory = arrayListOf<Category>()
             for (category in categories) {
-                val gamesList = arrayListOf<Games>()
+                val games = arrayListOf<Games>()
                 for (game in category.games) {
-                    val book = Games(game.title, game.img)
-                    gamesList += book
+                    games += Games(game.title, game.img)
                 }
-                gameCategory += Category(category.categoryTitle, gamesList)
+                gameCategory += Category(category.categoryTitle, games)
             }
             gameCategories = categories
         }
