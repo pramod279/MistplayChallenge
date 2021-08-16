@@ -2,6 +2,10 @@
 
 This repository contains the Mistplay Challenge Android app.<br>
 
+## Mistplay Challenge APK
+
+- [Download Challenge APK](https://github.com/pramod279/MistplayChallenge/blob/main/Challenge.apk)
+
 ## System Requirements
 
 - [Windows 10](https://www.microsoft.com/en-in/software-download/windows10)
