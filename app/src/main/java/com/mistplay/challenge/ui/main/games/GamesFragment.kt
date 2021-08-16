@@ -18,6 +18,7 @@ import com.mistplay.challenge.ui.main.games.viewmodel.GamesViewModel
 class GamesFragment : Fragment() {
     private lateinit var gamesViewModel: GamesViewModel
     private var _binding: FragmentGamesBinding? = null
+    private lateinit var categoryAdapter: CategoryAdapter
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -35,22 +36,28 @@ class GamesFragment : Fragment() {
         /*Specify the current activity as the lifecycle owner.*/
         binding.lifecycleOwner = this
 
-        val root: View = binding.root
+        initCategoryAdapter()
+
+        /*Bind Games Category Adapter*/
+        binding.recyclerViewCategory.adapter = categoryAdapter
 
         fetchGameCategories()
-        showGameCategories()
-        return root
+        observeGameCategories()
+        return binding.root
     }
 
-    /*Function for Fetching All The Game Categories From Repository*/
+    /*Function for Initialising Category Adapter*/
+    private fun initCategoryAdapter() {
+        categoryAdapter = CategoryAdapter()
+    }
+
+    /*Function for Fetching All The Categories From Repository*/
     private fun fetchGameCategories() {
-        context?.let { gamesViewModel.fetchAllCategories(it) }
+        gamesViewModel.fetchAllCategories(requireContext())
     }
 
     /*Function for Populating The Games Categories In The View*/
-    private fun showGameCategories() {
-        val categoryAdapter = CategoryAdapter()
-        binding.recyclerViewCategory.adapter = categoryAdapter
+    private fun observeGameCategories() {
         gamesViewModel.categories.observe(viewLifecycleOwner, {
             categoryAdapter.submitList(it)
         })

@@ -13,13 +13,12 @@ import com.mistplay.challenge.ui.utils.Utils
  * Created by Pramod Selvaraj on 13/08/2021.
  */
 class CategoryRepository {
-    private var gameCategories = listOf<Category>()
-
     /**
      * Function for Reading the Dummy Json Data from the Assets Folder
      * @return gameCategories
      */
     fun fetchCategories(context: Context): List<Category> {
+        var gameCategories = listOf<Category>()
         val jsonFileString = Utils.getJsonDataFromAsset(context, "categories.json")
         if (jsonFileString != null) {
             val listCategoryType = object : TypeToken<List<Category>>() {}.type
