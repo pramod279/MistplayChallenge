@@ -1,6 +1,6 @@
 # MistplayChallenge - Android 
 
-This repository contains the Mistplay Challenge Android app.<br>
+This repository contains the Mistplay Challenge Android app by Pramod Selvaraj.<br>
 
 ## System Requirements
 
@@ -16,6 +16,16 @@ This repository contains the Mistplay Challenge Android app.<br>
 ### Tools Required
 
 * SDK/IDE - Android Studio Arctic Fox v2020.3.1
+
+### Components Used
+
+* Material Design
+* Navigation Components
+* Live Data
+* Diff Util
+* View Model
+* Coroutines
+* Glide
 
 ### Demo Video
 
