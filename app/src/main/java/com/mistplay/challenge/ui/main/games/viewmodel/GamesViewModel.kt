@@ -21,11 +21,14 @@ class GamesViewModel : ViewModel() {
     /**
      * Lazy initialization is primarily used to improve performance,
      * avoid wasteful computation, and reduce program memory requirements.
+     *
+     * Listens for Data Changes
      */
     private val _categories by lazy {
         MutableLiveData<List<Category>>()
     }
 
+    /*Exposing The Retrieved Categories To The View*/
     val categories: LiveData<List<Category>> get() = _categories
 
     /*Function for fetching all the Categories From The Repository & Showing To View*/
@@ -36,6 +39,7 @@ class GamesViewModel : ViewModel() {
         )
     }
 
+    /*Cancel the Job If Already Initialised*/
     override fun onCleared() {
         super.onCleared()
         if (::job.isInitialized) job.cancel()
